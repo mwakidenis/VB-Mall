@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">741366849413-t02gpvpj1t3svmk5d6o1306p1q4s1ujk.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">741366849413</string>
+    <string name="google_api_key" translatable="false">AIzaSyBBHGtGSgScJ4J3F5pTXjOS-m5SGVqHSG4</string>
+    <string name="google_app_id" translatable="false">1:741366849413:android:e33ff2f65772682bc12eec</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBBHGtGSgScJ4J3F5pTXjOS-m5SGVqHSG4</string>
+    <string name="google_storage_bucket" translatable="false">vigybag-ac167.appspot.com</string>
+    <string name="project_id" translatable="false">vigybag-ac167</string>
+</resources>

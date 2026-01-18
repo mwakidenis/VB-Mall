@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Block access to any API endpoints
+Disallow: /api/
+
+# Block access to authentication pages
+Disallow: /login
+Disallow: /signup
+Disallow: /forgot-password
+
+# Block access to user account pages
+Disallow: /account
+Disallow: /profile
+
+# Block access to cart and checkout process
+Disallow: /cart
+Disallow: /checkout
+
+# Allow access to important content
+Allow: /products/
+Allow: /categories/
+Allow: /blog/
+
+# Block access to any React-specific files
+Disallow: /*.js$
+Disallow: /*.json
+
+# Block access to development or build-specific directories
+Disallow: /static/
+Disallow: /build/
+
+# Specify the location of your XML sitemap
+Sitemap: https://vigybag.com/sitemap.xml
+
+# Specify the location of your Progressive Web App manifest
+Allow: /manifest.json

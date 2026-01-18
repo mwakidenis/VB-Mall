@@ -1,0 +1,36 @@
+.down-arrow {
+    position: relative;
+
+}
+
+#arrow {
+    width: 40px;
+    margin-left: 700px;
+    animation: smoothUpDown 2s infinite alternate ease-in-out;
+}
+
+.custom-shadow {
+    box-shadow: 0px 6px 20px rgba(60, 60, 60, 0); /* Slightly lighter gray shadow */
+    border-radius: 8px;
+}
+
+  
+  
+@keyframes smoothUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #arrow {
+        margin-left: 388px;
+        margin-right: 356px;
+    }
+}

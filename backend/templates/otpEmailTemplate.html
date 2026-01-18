@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VigyBag - OTP Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(76, 175, 80, 0.15);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+            padding: 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: '🌿';
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 48px 32px;
+            background: linear-gradient(to bottom, #ffffff 0%, #f1f8f4 100%);
+        }
+
+
+        .leaf-accent {
+            text-align: center;
+            font-size: 32px;
+            opacity: 0.2;
+            margin: -10px 0;
+            user-select: none;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #2d5016;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .greeting {
+            font-size: 16px;
+            color: #5a7c59;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .message {
+            font-size: 15px;
+            color: #4a6b4a;
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .otp-container {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+            text-align: center;
+            border: 3px solid #81c784;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .otp-container::before {
+            content: '🌱';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            opacity: 0.3;
+        }
+
+        .otp-container::after {
+            content: '🌱';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 24px;
+            opacity: 0.3;
+            transform: rotate(180deg);
+        }
+
+        .otp-code {
+            font-size: 42px;
+            font-weight: 700;
+            color: #2e7d32;
+            letter-spacing: 16px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(46, 125, 50, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .otp-label {
+            font-size: 12px;
+            color: #558b2f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .validity {
+            display: inline-block;
+            background: #fff9c4;
+            color: #f57f17;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 24px;
+            border: 2px solid #fbc02d;
+        }
+
+        .eco-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 24px 0;
+            box-shadow: 0 4px 12px rgba(102, 187, 106, 0.3);
+        }
+
+        .warning {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-size: 14px;
+            color: #e65100;
+        }
+
+        .help-section {
+            background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 32px;
+            border: 2px solid #aed581;
+        }
+
+        .help-text {
+            font-size: 14px;
+            color: #558b2f;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .help-link {
+            color: #33691e;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .help-link:hover {
+            color: #558b2f;
+            border-bottom-color: #558b2f;
+        }
+
+        .footer {
+            background: linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 32px;
+            text-align: center;
+            border-top: 2px solid #a5d6a7;
+        }
+
+        .company-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d5016;
+            margin-bottom: 8px;
+        }
+
+        .address {
+            font-size: 13px;
+            color: #5a7c59;
+            margin-bottom: 20px;
+        }
+
+        .eco-message {
+            font-size: 12px;
+            color: #558b2f;
+            margin: 16px 0;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 0 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(86, 171, 47, 0.2);
+            border: 2px solid #a5d6a7;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(86, 171, 47, 0.4);
+            background: #f1f8e9;
+        }
+
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #7cb342;
+            margin-top: 16px;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            .header {
+                padding: 24px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .otp-code {
+                font-size: 32px;
+                letter-spacing: 12px;
+            }
+
+            .otp-container {
+                padding: 24px 16px;
+            }
+
+            .eco-message {
+                font-size: 11px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .otp-code {
+                font-size: 28px;
+                letter-spacing: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">VigyBag</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="leaf-accent">🌿 🍃 🌿</div>     
+
+            <h1>Verification Code</h1>
+
+            <p class="greeting">Hello <strong>{{username}}</strong> 🌱</p>
+
+            <p class="message">
+                Thank you for choosing VigyBag, your eco-conscious shopping companion. Please use the verification code
+                below to complete your authentication process.
+            </p>
+
+            <div class="otp-container">
+                <div class="otp-label">Your OTP Code</div>
+                <p class="otp-code">{{otp}}</p>
+            </div>
+
+            <div style="text-align: center;">
+                <span class="validity">⏱️ Valid for 10 minutes</span>
+            </div>
+
+            <div style="text-align: center;">
+                <div class="eco-badge">
+                    🌍 Carbon-Neutral Email
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>🔒 Security Notice:</strong> Never share this code with anyone. VigyBag will never ask for your
+                OTP via phone or email.
+            </div>
+
+            <div class="help-section">
+                <p class="help-text">🌿 Need assistance?</p>
+                <a href="mailto:vigybag@gmail.com" class="help-link">vigybag@gmail.com</a>
+                <span style="color: #aed581; margin: 0 8px;">|</span>
+                <a href="https://vigybag.com/help" class="help-link">Help Center</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="company-name">🌿 VigyBag</p>
+            <p class="address">Address 540, City, State</p>
+
+            <p class="eco-message">
+                <span>♻️</span>
+                <span>Together for a greener tomorrow • Sustainable shopping made simple</span>
+            </p>
+
+            <div class="social-links">
+                <a href="https://facebook.com/vigybag" class="social-icon" target="_blank">
+                    <img src="https://archisketch-resources.s3.ap-northeast-2.amazonaws.com/vrstyler/1661502815169_682499/email-template-icon-facebook"
+                        alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/vigybag" class="social-icon" target="_blank">
+                    <img src="https://archisketch-resources.s3.ap-northeast-2.amazonaws.com/vrstyler/1661504218208_684135/email-template-icon-instagram"
+                        alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/vigybag" class="social-icon" target="_blank">
+                    <img src="https://archisketch-resources.s3.ap-northeast-2.amazonaws.com/vrstyler/1661503043040_372004/email-template-icon-twitter"
+                        alt="Twitter" />
+                </a>
+                <a href="https://youtube.com/vigybag" class="social-icon" target="_blank">
+                    <img src="https://archisketch-resources.s3.ap-northeast-2.amazonaws.com/vrstyler/1661503195931_210869/email-template-icon-youtube"
+                        alt="Youtube" />
+                </a>
+            </div>
+
+            <p class="copyright">
+                © {{currentYear}} VigyBag. All rights reserved. 🌍 Committed to sustainability
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

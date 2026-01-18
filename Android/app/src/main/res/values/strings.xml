@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VigyBag</string>
+    <string name="or">Or</string>
+    <string name="default_web_client_id" translatable="false">741366849413-t02gpvpj1t3svmk5d6o1306p1q4s1ujk.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
+
+    <!--741366849413-t02gpvpj1t3svmk5d6o1306p1q4s1ujk.apps.googleusercontent.com-->

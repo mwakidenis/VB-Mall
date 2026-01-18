@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "741366849413",
+    "project_id": "vigybag-ac167",
+    "storage_bucket": "vigybag-ac167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741366849413:android:e33ff2f65772682bc12eec",
+        "android_client_info": {
+          "package_name": "com.example.vigybag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741366849413-t02gpvpj1t3svmk5d6o1306p1q4s1ujk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBHGtGSgScJ4J3F5pTXjOS-m5SGVqHSG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741366849413-t02gpvpj1t3svmk5d6o1306p1q4s1ujk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

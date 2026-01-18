@@ -1,0 +1,23 @@
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    padding-right: 30px;
+    /* Adjust padding to make space for the image */
+}
+
+.input-image {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+}
+
+.input-image:hover {
+    cursor: pointer;
+}

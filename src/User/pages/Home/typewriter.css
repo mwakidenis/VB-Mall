@@ -1,0 +1,21 @@
+/* Typewriter.css */
+@keyframes typewriter {
+    from {width: 0;}
+    to {width: 100%;}
+  }
+  
+  @keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: transparent;}
+  }
+  
+  .typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typewriter 3.5s steps(40, end),
+      blink .75s step-end infinite;
+  }

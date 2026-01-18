@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(20, 83, 45), #d6a075);
+  border-radius: 4px;
+  box-shadow: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  position: relative; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(rgb(20, 83, 45), #d6a075); 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6), inset 0 0 0 100px rgba(0, 0, 0, 0.1); 
+  cursor: pointer; 
+}
+

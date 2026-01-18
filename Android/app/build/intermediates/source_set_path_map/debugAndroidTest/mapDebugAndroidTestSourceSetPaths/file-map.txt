@@ -1,0 +1,5 @@
+com.example.vigybag.test.app-core-1.6.1-0 C:\Users\Lenovo\.gradle\caches\transforms-4\79b532256a8f14d13377c11e4189120e\transformed\core-1.6.1\res
+com.example.vigybag.test.app-androidTest-1 F:\VigyBag\app\build\generated\res\resValues\androidTest\debug
+com.example.vigybag.test.app-mergeDebugAndroidTestResources-2 F:\VigyBag\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.vigybag.test.app-mergeDebugAndroidTestResources-3 F:\VigyBag\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.vigybag.test.app-debugAndroidTest-4 F:\VigyBag\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

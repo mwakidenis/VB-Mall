@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<solid android:color="@color/lightG"/>
+    <stroke android:color="@color/lightG"/>
+    <corners android:topRightRadius="19.50dp"
+        android:topLeftRadius="19.50dp"
+        android:bottomRightRadius="19.50dp"
+        android:bottomLeftRadius="19.50dp"/>
+<!--        app:boxCornerRadiusBottomEnd="19.50dp"-->
+<!--        app:boxCornerRadiusBottomStart="19.50dp"-->
+<!--        app:boxCornerRadiusTopEnd="19.50dp"-->
+<!--        app:boxCornerRadiusTopStart="19.50dp"-->
+
+</shape>

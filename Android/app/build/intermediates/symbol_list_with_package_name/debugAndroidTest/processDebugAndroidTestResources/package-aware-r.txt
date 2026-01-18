@@ -1,0 +1,3 @@
+com.example.vigybag.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

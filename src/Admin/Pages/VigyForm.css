@@ -1,0 +1,17 @@
+.vigy-form .nav-pills .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.vigy-form .nav-pills .nav-link {
+  cursor: pointer;
+}
+
+.vigy-form .form-check-label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.vigy-form .form-check-label input {
+  margin-right: 0.5rem;
+}

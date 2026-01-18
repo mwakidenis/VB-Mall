@@ -1,0 +1,62 @@
+/* GoToTop.css */
+
+.go-to-top-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 110px; /* ✅ Sits above Support Chat (bottom: 45px) */
+  right: 30px;   /* ✅ Matches Support Chat horizontal alignment */
+  color: white;
+  background-color: #16a34a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-to-top-wrapper.hidden {
+  background-color: transparent;
+  cursor: default;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.go-to-top-wrapper:hover {
+  background-color: #005a01;
+  transform: scale(1.1);
+}
+
+.circular-progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Aligns progress start to top */
+}
+
+.circle-background {
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 5;
+  fill: none;
+}
+
+.circle {
+  stroke: rgba(255, 255, 255, 0.7);
+  stroke-width: 5;
+  stroke-dasharray: 157; /* Circumference of the circle */
+  stroke-dashoffset: 0;
+  fill: none;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.top-btn--icon {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  z-index: 2; /* Ensures icon is above SVG */
+  background-color: transparent;
+}

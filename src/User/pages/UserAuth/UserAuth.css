@@ -1,0 +1,223 @@
+/* UserAuth.css */
+
+/* Flip container styles */
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
+.flip-container.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .flip-container {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-container {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flip-container {
+    min-height: 350px;
+  }
+}
+
+/* Custom scrollbar for overflow areas */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Ensure proper input focus states */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.35);
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Form spacing adjustments for mobile */
+@media (max-width: 640px) {
+  .space-y-4 > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Password strength indicator animation */
+.password-strength-bar {
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Social login buttons responsive text */
+@media (max-width: 480px) {
+  .social-btn-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Prevent horizontal scroll on small devices */
+body {
+  overflow-x: hidden;
+}
+
+/* Enhanced mobile form styling */
+@media (max-width: 640px) {
+  .mobile-form-container {
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .mobile-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Loading spinner container */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+}
+
+/* Custom SweetAlert2 styles */
+.custom-popup {
+  font-family: inherit;
+}
+
+.custom-title {
+  color: #2d3e40;
+  font-weight: 600;
+}
+
+.custom-content {
+  color: #4a7c59;
+}
+
+.custom-confirm-button {
+  background-color: #4caf50 !important;
+  border: none !important;
+}
+
+.custom-confirm-button:hover {
+  background-color: #45a049 !important;
+}
+
+/* Responsive text sizing */
+@media (max-width: 1536px) {
+  .xl\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .xl\:text-5xl {
+    font-size: 2.5rem;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* Ensure proper spacing on very small devices */
+@media (max-width: 320px) {
+  .container-sm {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .form-input-sm {
+    padding: 0.625rem 0.75rem;
+    padding-left: 2.25rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-sm {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Fix for very long content on mobile */
+@media (max-height: 600px) and (max-width: 768px) {
+  .mobile-compact {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-compact .space-y-4 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .landscape-form {
+    padding: 0.5rem;
+  }
+
+  .landscape-form .space-y-4 > * + * {
+    margin-top: 0.375rem;
+  }
+
+  .landscape-form h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,159 @@
+.helpcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.helpcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 5px !important;
+
+}
+
+.card img {
+    width: 80px;
+    height: 100px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.helph1 {
+    color: #333;
+    font-size: 40px;
+    padding-top: 96px;
+}
+
+.card-content p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.flex-container {
+
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    height: 60vh;
+    /* Make the container full height of the viewport */
+}
+
+
+
+
+.helph1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+/* Make the cards align horizontally on large screens */
+@media (min-width: 768px) {
+    .helpcontainer {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .helpcard {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+
+    }
+}
+
+/* Make the cards align vertically on small screens */
+@media (max-width: 767px) {
+    .helpcontainer {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+
+    .helpcard {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+/* new faq */
+.helpfaq {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.helpfaq h2 {
+    font-weight: 900;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.helpfaq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.helpfaq li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.helpfaq h3 {
+    font-size: 18px;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.helpfaq h3:hover {
+    color: #333;
+}
+
+.helpfaq .arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.helpfaq .arrow span {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .helpfaq h3 {
+        font-size: 16px;
+    }
+
+    .helpfaq .arrow {
+        float: none;
+        display: inline-block;
+        margin-left: 10px;
+        transform: rotate(-90deg);
+    }
+}

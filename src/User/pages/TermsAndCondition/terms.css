@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.privacy-policy {
+    background-color: #fff0e3;  /* same as terms */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0;
+    padding: 40px 0;
+}
+
+.nav_menu .nav_link li a {
+    cursor: pointer;
+}
+
+.containerprivacy {
+    max-width: 85%;
+    margin: 40px auto 25px auto;  /* 👈 same spacing jaise terms */
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000;
+}
+
+.containerprivacy .head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.containerprivacy .head h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 0;   /* 👈 upar chipka hua */
+    color: rgb(77, 146, 78);
+    background: #fff;
+}
+
+.a {
+    color: blue;
+}
+
+ul li {
+    list-style: disc;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4e6d2e;
+    margin-top: 10px;   /* 👈 isko adjust karo (-90px hata ke chhota rakho) */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: medium;
+    font-weight: bold;
+    color: #4e6d2e;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: x-large;
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 5px;
+}
+
+.Lastupdate {
+    margin-bottom: 14px;
+    font-size: 17px;         
+    margin-top: 3px;
+  }
+#last-updated-date {
+    font-size: 17px;
+  }
+.navbar {
+  background-color: #edd1bb;  /* 👈 dark peach */
+  height: 100px;              /* apni requirement ke hisaab se */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.privacy-policy ul {
+  margin: 8px 0 8px 1.5rem; /* left indent thoda maintain karne ke liye */
+  padding-left: 1.2rem;     /* bullet aur text align ho jaye */
+}
+
+.privacy-policy li {
+  margin-bottom: 6px;       /* thoda spacing har point ke beech */
+  line-height: 1.6;         /* readability ke liye */
+}

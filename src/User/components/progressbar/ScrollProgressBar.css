@@ -1,0 +1,20 @@
+/* Loader.css */
+.loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 200px; /* Adjust height to match the loader */
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: transparent; /* Transparent background for the overlay */
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Additional styles for the loader if needed */

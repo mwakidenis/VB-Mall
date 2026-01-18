@@ -1,0 +1,41 @@
+/* Tailwind CSS media queries */
+@media (max-width: 768px) {
+    .progress-bar {
+      flex-direction: row; /* Maintain horizontal layout */
+      align-items: center;
+    }
+  
+    .progress-bar .absolute.h-1 {
+      width: 100%;
+      height: 4px; /* Adjust height for visibility */
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  
+    .progress-bar .progress-line {
+      height: 4px; /* Match the height of the background line */
+    }
+  
+    .progress-bar .flex-1 .absolute.w-full.h-1 {
+      display: none;
+    }
+  
+    .progress-bar .flex-1 .relative.z-10 {
+      margin-bottom: 0; /* Adjust margin */
+    }
+  
+    .progress-bar .flex-1 .mt-2 {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  .progress-bar .flex-1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 24px; /* Ensure the icons are not too large */
+    max-height: 24px; /* Ensure the icons are not too large */
+    object-fit: contain; /* Keep the icons' aspect ratio */
+  }
+  

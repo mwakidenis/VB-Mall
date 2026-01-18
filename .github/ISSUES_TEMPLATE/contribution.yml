@@ -1,0 +1,40 @@
+name: Program Participation Issue
+description: Use this template to report issues or suggestions related to Open Source Community India (OSCI) or GirlScript Summer of Code (GSSoC).
+title: "[Program Issue]: "
+labels: ["program-related"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to our project! Please fill out the details below to help us understand your issue or suggestion related to OSCI or GSSoC.
+
+  - type: checkboxes
+    id: program_affiliation
+    attributes:
+      label: Program Affiliation
+      description: Select at least one program this issue pertains to.
+      options:
+        - label: Open Source Community India (OSCI)
+          required: false
+        - label: GirlScript Summer of Code (GSSoC)
+          required: false
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Issue Description
+      description: Provide a clear and concise description of the issue or suggestion.
+      placeholder: Describe the issue or suggestion related to OSCI or GSSoC.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other relevant details, such as links, screenshots, or specific examples.
+      placeholder: Include any additional information that might help us address your issue.
+    validations:
+      required: false
