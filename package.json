@@ -50,7 +50,7 @@
     "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "styled-component": "^2.8.0",
-    "styled-components": "^6.1.15",
+    "styled-components": "^6.3.8",
     "sweetalert2": "^11.19.1"
   },
   "devDependencies": {
