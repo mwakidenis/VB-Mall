@@ -12,8 +12,8 @@ import syed from "../../../assets/syed.png";
 import mahima from "../../../assets/mahima.png";
 
 import ContributorCard from "../../components/About/ContributorCard";
-import coFounder from "../../../assets/co-founder.png";
-import founder from "../../../assets/founder.png";
+import coFounder from "../../../assets/co-founder.jpeg";
+import founder from "../../../assets/founder.jpg";
 import Networkdiagram from "../../components/About/Networkdiagram";
 import Header from "../../components/About/Header";
 
