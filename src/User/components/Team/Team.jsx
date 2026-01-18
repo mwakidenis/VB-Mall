@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import coFounder from "../../../assets/co-founder.jpeg";
+import coFounder from "../../../assets/co-founder.jpg";
 import founder from "../../../assets/founder.jpg";
 import { FiGithub, FiTwitter, FiLinkedin } from 'react-icons/fi';
 import { FaInstagram, FaXTwitter } from 'react-icons/fa6';
