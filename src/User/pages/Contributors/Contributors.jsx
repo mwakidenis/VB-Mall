@@ -13,7 +13,7 @@ import mahima from "../../../assets/mahima.png";
 
 import ContributorCard from "../../components/About/ContributorCard";
 import coFounder from "../../../assets/co-founder.jpeg";
-import founder from "../../../assets/founder.jpg";
+import founder from "../../../assets/founder.jpeg";
 import Networkdiagram from "../../components/About/Networkdiagram";
 import Header from "../../components/About/Header";
 
