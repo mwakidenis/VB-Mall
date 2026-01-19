@@ -1,1 +1,1 @@
-export const API_URL = "https://vigybag.onrender.com";
+export const API_URL = "http://localhost:5000";
