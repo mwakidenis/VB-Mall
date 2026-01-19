@@ -4,7 +4,7 @@
   "description": "VigyBag server and backend credentials",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js",
     "prod": "node server.js",
     "lint": "eslint .",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codervivek5/VigyBag.git"
+    "url": "https://github.com/mwakidenis/VigyBag.git"
   },
   "keywords": [
     "vigybag",
@@ -22,12 +22,12 @@
     "server",
     "API"
   ],
-  "author": "Vivek Prajapati",
+  "author": "Mwaki Denis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codervivek5/VigyBag/issues"
+    "url": "https://github.com/mwakidenis/VigyBag/issues"
   },
-  "homepage": "https://github.com/codervivek5/VigyBag#readme",
+  "homepage": "https://github.com/mwakidenis/VigyBag#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^2.2.0",
