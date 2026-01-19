@@ -1,54 +1,67 @@
-// Passport.js
+// backend/middlewares/Passport.js  — FINAL SAFE VERSION
+
+require("dotenv").config();
 const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const User = require("../models/User");
-const dotenv = require("dotenv");
 
-dotenv.config();
-
+// ===== LOCAL LOGIN (Email + Password) =====
 passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: process.env.GOOGLE_CALLBACK_URL,
-    },
-    async (accessToken, refreshToken, profile, done) => {
-
-
-
+  new LocalStrategy(
+    { usernameField: "email" },
+    async (email, password, done) => {
       try {
-        let user = await User.findOne({ googleId: profile.id });
-        if (user) {
-          return done(null, user);
-        }
+        const user = await User.findOne({ email });
+        if (!user) return done(null, false, { message: "User not found" });
 
-        user = await User.findOne({ email: profile.emails[0].value });
-        if (user) {
-          user.googleId = profile.id;
-          await user.save();
-          return done(null, user);
-        }
+        const isMatch = await user.comparePassword(password);
+        if (!isMatch) return done(null, false, { message: "Wrong password" });
 
-        const newUser = await new User({
-          googleId: profile.id,
-          email: profile.emails[0].value,
-          username: profile.emails[0].value.split("@")[0], // Set username from email
-        }).save();
-
-        done(null, newUser);
+        return done(null, user);
       } catch (err) {
-        console.error("Google OAuth error:", err);
-        if (err.code === 11000) {
-          done(new Error("User with this email already exists."), null);
-        } else {
-          done(err, null);
-        }
+        return done(err);
       }
     }
   )
 );
 
+// ===== GOOGLE LOGIN (ONLY IF KEYS EXIST) =====
+if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
+  console.log("✅ Google OAuth ENABLED");
+
+  passport.use(
+    new GoogleStrategy(
+      {
+        clientID: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL:
+          process.env.GOOGLE_CALLBACK_URL ||
+          "https://vigybag.onrender.com/auth/google/callback",
+      },
+      async (accessToken, refreshToken, profile, done) => {
+        try {
+          let user = await User.findOne({ googleId: profile.id });
+
+          if (!user) {
+            user = await User.create({
+              googleId: profile.id,
+              email: profile.emails[0].value,
+              name: profile.displayName,
+            });
+          }
+          return done(null, user);
+        } catch (err) {
+          return done(err);
+        }
+      }
+    )
+  );
+} else {
+  console.log("⚠️ Google OAuth DISABLED (missing env variables)");
+}
+
+// ===== SESSION SERIALIZATION =====
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
