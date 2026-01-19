@@ -1,4 +1,8 @@
 // backend/app.js - FINAL WORKING VERSION
+app.get("/", (req, res) => {
+  res.send("✅ VigyBag Backend is Live on Render!");
+});
+
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
