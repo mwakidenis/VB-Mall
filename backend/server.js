@@ -1,14 +1,13 @@
 // server.js
 const app = require("./app");
-const connectDB = require("./config/db"); // Import the connectDB function from db.js
-const config = require("./config/config"); 
+const connectDB = require("./config/db");
+
 // Connect to MongoDB
 connectDB();
 
-// Start the server
-const PORT = config.port || 30000;
-app.listen(PORT, () => {
+// 🚨 IMPORTANT FIX: Always trust Render's PORT first
+const PORT = process.env.PORT || 5000;
 
-  const serverAddress = process.env.SERVER_URL || `http://localhost:${PORT}`;
-  console.log(`🚀 Server is live and running on: ${serverAddress}`);
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
