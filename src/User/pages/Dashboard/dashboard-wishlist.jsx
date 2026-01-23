@@ -27,12 +27,12 @@ const WishlistItem = ({ product, onUpdate, onAddToCart, isExistsInTheCart }) => 
       />
       <div>
         <h3 className="text-lg font-semibold text-zinc-800">{product.title}</h3>
-        <p className="text-gray-600 text-lg font-semibold mt-2 flex items-center gap-2">
-          ₹{product.newPrice}
-          <span className="text-sm text-green-500 line-through">
-            ₹{product.price.toFixed(2)}
-          </span>
-        </p>
+       <p className="text-gray-600 text-lg font-semibold mt-2 flex items-center gap-2">
+  KES {(product.newPrice * 160).toLocaleString()}
+  <span className="text-sm text-green-500 line-through">
+    KES {(product.price * 160).toFixed(2)}
+  </span>
+</p>
         <button
           className="mt-4 bg-[#166635ff] text-white px-4 py-2 rounded text-sm hover:bg-[#3d9970ff] transition-colors disabled:opacity-45 disabled:pointer-events-none"
           onClick={() => {
