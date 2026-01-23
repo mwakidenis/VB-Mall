@@ -70,53 +70,83 @@ const Dashboard = () => {
   }, [searchParams, navigate]);
 
   // Aapka baaki ka code...
-  const initialProducts = [
-    {
-      image: granola,
-      title: "Snacker's Special Granola",
-      price: 350,
-      rating: 5,
-    },
-    {
-      image: cuttery,
-      title: "Wooden Cutlery Set of 7",
-      price: 1200,
-      rating: 4,
-    },
-    { image: basket, title: "Jute Cotton Basket", price: 399, rating: 4 },
-    { image: shawls, title: "Premium Woolen Shawls", price: 5000, rating: 5 },
-  ];
+ const initialProducts = [
+  {
+    image: granola,
+    title: "Snacker's Special Granola",
+    price: 56000, // 350 * 160
+    rating: 5,
+  },
+  {
+    image: cuttery,
+    title: "Wooden Cutlery Set of 7",
+    price: 192000, // 1200 * 160
+    rating: 4,
+  },
+  {
+    image: basket,
+    title: "Jute Cotton Basket",
+    price: 63840, // 399 * 160
+    rating: 4,
+  },
+  {
+    image: shawls,
+    title: "Premium Woolen Shawls",
+    price: 800000, // 5000 * 160
+    rating: 5,
+  },
+];
 
-  const moreProducts = [
-    { image: notebooks, title: "Eco-Friendly Notebook", price: 250, rating: 4 },
-    {
-      image: toothbrushes,
-      title: "Bamboo Toothbrush Set",
-      price: 150,
-      rating: 5,
-    },
-    { image: towels, title: "Organic Cotton Towels", price: 600, rating: 4 },
-    {
-      image: shoppingBags,
-      title: "Reusable Shopping Bags",
-      price: 300,
-      rating: 5,
-    },
-    {
-      image: phoneCase,
-      title: "Biodegradable Phone Case",
-      price: 450,
-      rating: 5,
-    },
-    {
-      image: journals,
-      title: "Recycled Paper Journals",
-      price: 200,
-      rating: 4,
-    },
-    { image: waterBottle, title: "Glass Water Bottle", price: 350, rating: 5 },
-    { image: teaSet, title: "Organic Tea Set", price: 750, rating: 5 },
-  ];
+const moreProducts = [
+  {
+    image: notebooks,
+    title: "Eco-Friendly Notebook",
+    price: 40000, // 250 * 160
+    rating: 4,
+  },
+  {
+    image: toothbrushes,
+    title: "Bamboo Toothbrush Set",
+    price: 24000, // 150 * 160
+    rating: 5,
+  },
+  {
+    image: towels,
+    title: "Organic Cotton Towels",
+    price: 96000, // 600 * 160
+    rating: 4,
+  },
+  {
+    image: shoppingBags,
+    title: "Reusable Shopping Bags",
+    price: 48000, // 300 * 160
+    rating: 5,
+  },
+  {
+    image: phoneCase,
+    title: "Biodegradable Phone Case",
+    price: 72000, // 450 * 160
+    rating: 5,
+  },
+  {
+    image: journals,
+    title: "Recycled Paper Journals",
+    price: 32000, // 200 * 160
+    rating: 4,
+  },
+  {
+    image: waterBottle,
+    title: "Glass Water Bottle",
+    price: 56000, // 350 * 160
+    rating: 5,
+  },
+  {
+    image: teaSet,
+    title: "Organic Tea Set",
+    price: 120000, // 750 * 160
+    rating: 5,
+  },
+];
 
   const [products] = useState([...initialProducts, ...moreProducts]);
   const [openDropdown, setOpenDropdown] = useState(null);
