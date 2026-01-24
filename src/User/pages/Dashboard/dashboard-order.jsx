@@ -134,31 +134,29 @@ const DashboardOrders = () => {
           <h2 className={`text-2xl font-bold mb-4 ${textColor}`}>
             Your Orders
           </h2>
-          
-<ProductCard
-  arrivalDate="Arriving Wednesday"
-  productName="BAMBOO PRODUCT - TUMBLER"
-  productDescription="This eco-friendly bamboo tumbler offers a stylish and sustainable alternative for your beverage needs. Its natural bamboo exterior provides excellent insulation while ensuring a unique and elegant look."
-  productImage={TUMBLER}
-  orderPlaced="8 JUNE 2024"
-  totalItems="1"
-  totalAmount="KES 1,500" // realistic Kenyan retail price
-  shipTo="Sai Pradyumna"
-  orderId="123-456789-0987654"
-/>
 
-<ProductCard
-  arrivalDate="Arriving Friday"
-  productName="BAMBOO PRODUCT - BOTTLE"
-  productDescription="A sleek bamboo bottle designed for durability and style. Perfect for keeping your drinks hot or cold."
-  productImage={TUMBLER}
-  orderPlaced="9 JUNE 2024"
-  totalItems="1"
-  totalAmount="KES 1,300" // realistic Kenyan retail price
-  shipTo="Sai Pradyumna"
-  orderId="123-456789-0987655"
-/>
-
+          <ProductCard
+            arrivalDate="Arriving Wednesday"
+            productName="BAMBOO PRODUCT - TUMBLER"
+            productDescription="This eco-friendly bamboo tumbler offers a stylish and sustainable alternative for your beverage needs. Its natural bamboo exterior provides excellent insulation while ensuring a unique and elegant look."
+            productImage={TUMBLER}
+            orderPlaced="8 JUNE 2024"
+            totalItems="1"
+            totalAmount="KSh1225"
+            shipTo="Sai Pradyumna"
+            orderId="123-456789-0987654"
+          />
+          <ProductCard
+            arrivalDate="Arriving Friday"
+            productName="BAMBOO PRODUCT - BOTTLE"
+            productDescription="A sleek bamboo bottle designed for durability and style. Perfect for keeping your drinks hot or cold."
+            productImage={TUMBLER}
+            orderPlaced="9 JUNE 2024"
+            totalItems="1"
+            totalAmount="₹250"
+            shipTo="Sai Pradyumna"
+            orderId="123-456789-0987655"
+          />
         </div>
       </main>
     </div>
