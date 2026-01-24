@@ -13,7 +13,7 @@ const ProductCard = ({ image, title, price, rating }) => {
         <h3 className="text-lg font-semibold text-[#171616]">{title}</h3>
 
         <div className="flex items-center justify-between mt-3">
-          <p className="text-[#1b1a1a]">KES {price}</p>
+          <p className="text-[#1b1a1a]">KSh{price}</p>
           <div className="flex gap-1 text-yellow-500">
             {[...Array(rating)].map((_, i) => (
               <FaStar key={i} />
