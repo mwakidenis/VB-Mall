@@ -68,8 +68,8 @@ const ProductDetails = ({ product }) => {
         {product?.description}
       </p>
       <p className="text-xl font-semibold mb-2">
-        ₹{product?.newPrice}{" "}
-        <span className="line-through text-zinc-500">{product?.price}</span> (
+        KSh{product?.newPrice}{" "}
+        <span className="line-through text-zinc-500">KSh{product?.price}</span> (
         {product?.discountPercentage}% OFF)
       </p>
       <p className="text-zinc-500 dark:white mb-4">Inclusive of taxes</p>
