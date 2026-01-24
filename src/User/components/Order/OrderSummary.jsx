@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setTotalAmount as setTotalAmountAction } from "../../redux/cartSlice";
 
-const currencyFormatter = new Intl.NumberFormat("en-IN", {
+const currencyFormatter = new Intl.NumberFormat("en-KE", {
   style: "currency",
-  currency: "INR",
+  currency: "KES",
 });
 
 const cardClass = "p-4 bg-white rounded-lg shadow-md";
