@@ -142,7 +142,7 @@ const DashboardOrders = () => {
   productImage={TUMBLER}
   orderPlaced="8 JUNE 2024"
   totalItems="1"
-  totalAmount="KES 56,000" // 350 * 160
+  totalAmount="KES 1,500" // realistic Kenyan retail price
   shipTo="Sai Pradyumna"
   orderId="123-456789-0987654"
 />
@@ -154,12 +154,11 @@ const DashboardOrders = () => {
   productImage={TUMBLER}
   orderPlaced="9 JUNE 2024"
   totalItems="1"
-  totalAmount="KES 40,000" // 250 * 160
+  totalAmount="KES 1,300" // realistic Kenyan retail price
   shipTo="Sai Pradyumna"
   orderId="123-456789-0987655"
 />
 
-          />
         </div>
       </main>
     </div>
