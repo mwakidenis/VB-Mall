@@ -68,8 +68,14 @@ exports.getProducts = async (req, res) => {
       Product.countDocuments(filter),
     ]);
 
+    const convertedItems = items.map(item => ({
+      ...item.toObject(),
+      price: Math.round(item.price * 3.5 * 100) / 100,
+      currency: "KES"
+    }));
+
     res.status(200).json({
-      data: items,
+      data: convertedItems,
       pagination: {
         page: pageNum,
         limit: limitNum,
@@ -89,7 +95,13 @@ exports.getProductById = async (req, res) => {
     if (!product)
       return res.status(404).json({ error: "Product not found" });
 
-    res.status(200).json(product);
+    const convertedProduct = {
+      ...product.toObject(),
+      price: Math.round(product.price * 3.5 * 100) / 100,
+      currency: "KES"
+    };
+
+    res.status(200).json(convertedProduct);
   } catch (error) {
     // Handle invalid ObjectId format
     if (error.name === "CastError") {
