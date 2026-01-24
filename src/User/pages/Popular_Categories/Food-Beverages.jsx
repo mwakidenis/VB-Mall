@@ -28,7 +28,7 @@ function FoodBeverages() {
             const mappedProducts = response.data.products.map((product) => ({
               id: product.id,
               title: product.title,
-              price: product.price,
+              price: product.price * 160, // USD → KES conversion
               category: product.category,
               image: product.images[0] || "",
               discountPercentage: product.discountPercentage,
@@ -70,7 +70,7 @@ function FoodBeverages() {
           (product) => product.price <= parseInt(priceFilter)
         );
       }
-     updatedProducts = normalizeAndFilterByRating(updatedProducts, ratingFilter);
+      updatedProducts = normalizeAndFilterByRating(updatedProducts, ratingFilter);
 
       setFilteredProducts(updatedProducts);
     };
