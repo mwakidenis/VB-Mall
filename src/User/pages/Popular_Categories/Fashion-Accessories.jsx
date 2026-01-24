@@ -17,7 +17,18 @@ function FashionAccessories() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesToFetch = ["womens-dresses", "tops", "mens-shirts", "mens-watches", "womens-watches", "womens-jewellery", "womens-bags", "womens-shoes", "sunglasses", "mens-shoes"]; // desired categories
+        const categoriesToFetch = [
+          "womens-dresses",
+          "tops",
+          "mens-shirts",
+          "mens-watches",
+          "womens-watches",
+          "womens-jewellery",
+          "womens-bags",
+          "womens-shoes",
+          "sunglasses",
+          "mens-shoes"
+        ]; // desired categories
         let allProducts = [];
 
         // Fetch products from each category
@@ -27,7 +38,7 @@ function FashionAccessories() {
             const mappedProducts = response.data.products.map((product) => ({
               id: product.id,
               title: product.title,
-              price: product.price,
+              price: product.price * 160, // USD → KES conversion
               category: product.category,
               image: product.images[0] || "",
               discountPercentage: product.discountPercentage,
@@ -81,7 +92,10 @@ function FashionAccessories() {
     <div className="bg-[#fff5edff] min-h-screen">
       <Helmet>
         <title>Fashion Accessories | VigyBag</title>
-        <meta name="description" content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing." />
+        <meta
+          name="description"
+          content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing."
+        />
       </Helmet>
       <main className="container">
         <div className="flex flex-col lg:flex-row gap-8 relative">
