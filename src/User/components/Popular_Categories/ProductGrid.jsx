@@ -98,9 +98,9 @@ function ProductCard({ product }) {
         </h3>
         {/* Price */}
         <p className="text-gray-600 text-lg font-semibold flex items-center gap-2">
-          ₹{product.newPrice}
+          KSh{product.newPrice}
           <span className="text-sm text-green-500 line-through">
-            ₹{product.price.toFixed(2)}
+            KSh{product.price.toFixed(2)}
           </span>
         </p>
         {/* Rating */}
