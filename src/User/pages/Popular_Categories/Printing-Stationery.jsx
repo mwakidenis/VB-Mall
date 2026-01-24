@@ -6,8 +6,7 @@ import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import { normalizeAndFilterByRating } from "../../utils/productFilters";
 
-
-
+const USD_TO_KES = 160; // 🔥 currency conversion only
 
 function PrintingStationery() {
   const [products, setProducts] = useState([]);
@@ -30,7 +29,10 @@ function PrintingStationery() {
             const mappedProducts = response.data.products.map((product) => ({
               id: product.id,
               title: product.title,
-              price: product.price,
+
+              // 🔥 ONLY CHANGE: convert USD → KES
+              price: Math.round(product.price * USD_TO_KES),
+
               category: product.category,
               image: product.images[0] || "",
               discountPercentage: product.discountPercentage,
