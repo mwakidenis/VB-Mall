@@ -6,8 +6,6 @@ import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import { normalizeAndFilterByRating } from "../../utils/productFilters";
 
-
-
 function BodyCare() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -29,12 +27,12 @@ function BodyCare() {
             const mappedProducts = response.data.products.map((product) => ({
               id: product.id,
               title: product.title,
-              price: product.price,
+              price: product.price * 160, // USD → KES conversion
               category: product.category,
               image: product.images[0] || "",
               discountPercentage: product.discountPercentage,
               rating: {
-                rate:  Math.round(product.rating),
+                rate: Math.round(product.rating),
                 count: product.reviews ? product.reviews.length : 0,
               },
             }));
@@ -83,7 +81,10 @@ function BodyCare() {
     <div className="bg-[#fff5edff] min-h-screen">
       <Helmet>
         <title>Body Care | VigyBag</title>
-        <meta name="description" content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing." />
+        <meta
+          name="description"
+          content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing."
+        />
       </Helmet>
       <main className="container">
         <div className="flex flex-col lg:flex-row gap-8 relative">
