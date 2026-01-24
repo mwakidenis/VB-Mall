@@ -6,7 +6,6 @@ import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import { normalizeAndFilterByRating } from "../../utils/productFilters";
 
-
 function CustomizedGifts() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -18,7 +17,15 @@ function CustomizedGifts() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesToFetch = ["tops", "womens-watches", "mens-watches", "mobile-accessories", "sports-accessories", "motorcycle", "vehicle"]; // desired categories
+        const categoriesToFetch = [
+          "tops",
+          "womens-watches",
+          "mens-watches",
+          "mobile-accessories",
+          "sports-accessories",
+          "motorcycle",
+          "vehicle"
+        ]; // desired categories
         let allProducts = [];
 
         // Fetch products from each category
@@ -28,12 +35,12 @@ function CustomizedGifts() {
             const mappedProducts = response.data.products.map((product) => ({
               id: product.id,
               title: product.title,
-              price: product.price,
+              price: product.price * 160, // USD → KES conversion
               category: product.category,
               image: product.images[0] || "",
               discountPercentage: product.discountPercentage,
               rating: {
-                rate:  Math.round(product.rating),
+                rate: Math.round(product.rating),
                 count: product.reviews ? product.reviews.length : 0,
               },
             }));
@@ -70,7 +77,7 @@ function CustomizedGifts() {
           (product) => product.price <= parseInt(priceFilter)
         );
       }
-       updatedProducts = normalizeAndFilterByRating(updatedProducts, ratingFilter);
+      updatedProducts = normalizeAndFilterByRating(updatedProducts, ratingFilter);
       setFilteredProducts(updatedProducts);
     };
 
@@ -81,7 +88,10 @@ function CustomizedGifts() {
     <div className="bg-[#fff5edff] min-h-screen">
       <Helmet>
         <title>Customized Gifts | VigyBag</title>
-        <meta name="description" content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing." />
+        <meta
+          name="description"
+          content="Explore a wide range of beauty and wellness products at VigyBag. Find the best products to enhance your beauty and wellbeing."
+        />
       </Helmet>
       <main className="container">
         <div className="flex flex-col lg:flex-row gap-8 relative">
