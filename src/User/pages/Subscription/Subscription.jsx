@@ -18,7 +18,7 @@ const SubscriptionPage = () => {
   };
 
   const calculateTotalPrice = () => {
-    const basePrice = selectedPlan === 'Pro Plan' ? 59.99 : 189.00;
+    const basePrice = selectedPlan === 'Pro Plan' ? 209.97 : 661.50;
     const discount = discountApplied ? basePrice * 0.30 : 0;
     return basePrice - discount;
   };
