@@ -154,15 +154,15 @@ const Footer = () => {
             <address>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon location-icon" />
-                <span className="address-line">Kanpur, Uttar Pradesh 208025</span>
+                <span className="address-line">Nchiru, Near Meru University</span>
               </div>
               <div className="contact-item">
                 <FaEnvelope className="contact-icon email-icon" />
-                <a href="mailto:vigybag@gmail.com">vigybag@gmail.com</a>
+                <a href="mailto:mwakidenice@gmail.com">mwakidenice@gmail.com</a>
               </div>
               <div className="contact-item">
                 <FaPhone className="contact-icon phone-icon" />
-                <a href="tel:+911234567890">+91 1234567890</a>
+                <a href="tel:+254798750585">+254 798 750 585</a>
               </div>
             </address>
 
