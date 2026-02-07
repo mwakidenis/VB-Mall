@@ -4,11 +4,8 @@
  ## Table of Contents 📒
 
 - [Introduction 👋](#introduction)
-- [Repository 📒](#repo)
-- [Features ⭐](#features)
 - [TechStacks ⚙️](#tech)
 - [Contributing🤝](#contributing)
-- [Our Contributors ❤️](#contributors)
 <br>
 
 
