@@ -102,7 +102,7 @@ We accpet contributions to our project pertaining to the [Code of Conduct](https
 **We're accepting PRs for our open and unassigned [issues](https://github.com/codervivek5/VigyBag/issues)**. Please check [CONTRIBUTING.md](https://github.com/codervivek5/VigyBag/blob/main/CONTRIBUTING.md). We love contributions and welcome them as long as you respect the community and our rules! **Kindly follow the steps below to get started:** 
 
 
-**1.** Fork [the](https://github.com/codervivek5/VigyBag) repository.
+**1.** Fork [the](https://github.com/mwakidenis/VB-Mall) repository.
 
 **2.** Clone the forked repository.
 
@@ -122,7 +122,7 @@ npm i
 ```
 **5.** Add a reference(remote) to the original repository.
 ```
-git remote add upstream https://github.com/codervivek5/VigyBag.git
+git remote add upstream https://github.com/mwakidenis/VB-Mall.git
 ```
 
 **6.** Check the remotes for this repository.
@@ -167,7 +167,7 @@ git commit -m "<your_commit_message>"
 git push -u origin <your_branch_name>
 ```
 
-**14.** To Create a [PR](https://codervivek5.github.io/VigyBag/) to `develop` !) repository, click on `compare and pull request`.
+**14.** To Create a [PR](https://mwakidenis.github.io/VB-Mall/) to `develop` !) repository, click on `compare and pull request`.
 
 **15.** Add an appropriate title and description to your PR explaining your changes.
 
@@ -275,7 +275,7 @@ To deploy VigyBag to a production server :
 If you encounter any issues while setting up or using VigyBag, try the following:
 
 - Double-check your environment setup against the installation instructions.
-- Search for similar issues in the project's [GitHub Issues](https://github.com/codervivek5/VigyBag/issues).
+- Search for similar issues in the project's [GitHub Issues](https://github.com/mwakidenis/VB-Mall/issues).
 - Reach out to the community or project maintainers for assistance.
 
 
@@ -297,7 +297,7 @@ If you encounter any issues while setting up or using VigyBag, try the following
 
 Made with [contrib.rocks](https://contrib.rocks).
 
-<p><a href="https://GitHub.com/codervivek5/"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="ForTheBadge built-by-developers"></a></p>
+<p><a href="https://GitHub.com/mwakidenis/"><img src="http://ForTheBadge.com/images/badges/built-by-developers.svg" alt="ForTheBadge built-by-developers"></a></p>
 
 ## 🛡️ License
 This repository is licensed under the [MIT License](https://github.com/codervivek5/VigyBag/blob/main/LICENSE) - see the LICENSE file for details.
@@ -320,7 +320,7 @@ If you want to contact me, you can reach me through below handles.
 Thank you for considering contributing to VigyBag. We look forward to your valuable contributions!
 
 <div align="center">
-<h3>© 2022-2024 Coder Vivek</h3>
+<h3>©2026 mwakidenis</h3>
 </div>
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
