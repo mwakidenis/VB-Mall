@@ -6,7 +6,7 @@ const authController = require("../controllers/authController.js");
 
 // load environment variables from .env file
 
-const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET; 
 const ACCESS_TOKEN_EXPIRES = process.env.ACCESS_TOKEN_EXPIRES;
 
 // --- Standard Auth Routes ---
