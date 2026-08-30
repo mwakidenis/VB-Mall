@@ -32,7 +32,7 @@
     "node": "^22.7.0",
     "nodemailer": "^7.0.5",
     "razorpay": "^2.9.4",
-    "react": "^18.2.0",
+    "react": "^19.2.3",
     "react-confetti": "^6.1.0",
     "react-cookie-consent": "^9.0.0",
     "react-ctrl-f": "^0.0.4",
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^18.3.6",
+    "@types/react": "^19.2.8",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.21",
